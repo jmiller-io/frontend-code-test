@@ -50,9 +50,9 @@
 	<div id="header">
 		<h1>Javascript Tests</h1>
 	</div>
-	
-	
-	
+
+
+
 	<h2>Manipulate the Last LI</h2>
 	<p>Select the Last Li in this list and turn its text red.</p>
 	<div id="content">
@@ -67,11 +67,10 @@
 			</div>
 		</div>
 	</div>
-	
-	
-	
-	
-	
+
+
+
+
 	<h2>Select specific children from a nested list.</h2>
 	<p>Select the only the first children of the LI "Sally".</p>
 	<div id="content2">
@@ -101,11 +100,11 @@
 			</div>
 		</div>
 	</div>
-	
-	
-	
-	
-	
+
+
+
+
+
 	<h2>Get a Field value and Write it to the page</h2>
 	<p>Write the value of the "Code Types" select field to a new div within the fieldset.</p>
 	<form method="post" action="">
@@ -120,24 +119,24 @@
 			</label>
 		</fieldset>
 	</form>
-	
-	
-	
-	
+
+
+
+
 	<h2>Find Dimensions of an Element</h2>
 	<p>Write actual rendered dimensions of the following div including any padding to the div itself.</p>
 	<div id="setDims">This is a div. How big am i?</div>
-	
-	
-	
-	
+
+
+
+
 	<h2>Events</h2>
 	<p>Place a click event on the following link. When clicked toggle it's class name from 'clicked' to 'not-clicked'.</p>
 	<a id="clickEventLink" href="#clicked" title="Click Me" class="not-clicked">Click Me</a>
-	
-	
-	
-	
+
+
+
+
 	<h2>Ajax</h2>
 	<p>Call ajax_return.html and write's its json as a "name": "value" list to the following div:</p>
 	<div id="jsonResponse">My Response Was...</div>
@@ -146,5 +145,51 @@ Place your answers below this comment block.
 Note: You have jquery already loaded on the page.
 Please also write your jquery in a no conflict manner.
 -->
+<script>
+  // Select last li in #content and turn text to red
+  jQuery('#content div div ul').children().last().css('color', 'red');
+
+
+  // Select only the first children of the LI "Sally".
+  // Sally only has one child which is the unordered list. this would get it
+  jQuery('li:contains("Sally") ul').first();
+  // if you wanted to select the first child of the first child of Sally this would do it
+  jQuery('li:contains("Sally") ul li').first();
+
+
+  // Write the value of the "Code Types" select field to a new div within the fieldset.
+  jQuery('<div>').appendTo('fieldset');
+  jQuery('select').on('change', (evt) => {
+    jQuery('fieldset div').text(evt.currentTarget.value);
+  })
+
+
+  // Write actual rendered dimensions of the following div including any padding to the div itself
+  setDims = jQuery('#setDims');
+  setDims.text('Width: ' + setDims.outerWidth() + '  Height: ' + setDims.outerHeight());
+
+
+  // Place a click event on the following link. When clicked toggle it's class name from 'clicked' to 'not-clicked'
+  jQuery('#clickEventLink').click((evt) => {
+    if (evt.currentTarget.classList.value === 'not-clicked') {
+        evt.currentTarget.classList.add('clicked')
+        evt.currentTarget.classList.remove('not-clicked')
+    } else {
+      evt.currentTarget.classList.remove('clicked')
+      evt.currentTarget.classList.add('not-clicked')
+    }
+  });
+
+
+  // Call ajax_return.html and write's its json as a "name": "value" list to the following div:
+  jQuery.get('ajax_return.html', (data) => {
+    jQuery('<ul>').appendTo('#jsonResponse')
+    let parsedData = jQuery.parseJSON(data)
+    for (var key in parsedData) {
+      let item = jQuery('<li>').text(key + ': ' + parsedData[key])
+      jQuery('#jsonResponse ul').append(item);
+    }
+  });
+</script>
 </body>
 </html>
