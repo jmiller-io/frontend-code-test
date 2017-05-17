@@ -1,0 +1,42 @@
+body {
+  background-color: purple;
+}
+
+#logo {
+ border: 1px solid red;
+ /*display: inline-block;*/
+ float: left;
+ width: 50%;
+}
+
+.horizontal_list {
+  display: block;
+  text-align: right;
+}
+
+#right_header {
+  border: 1px solid blue;
+  width: 50%;
+  float: right;
+}
+
+#icons {
+  padding-right: 2%;
+}
+
+.horizontal_list li {
+  display: inline-block;
+}
+
+.main_navigation li {
+  padding: 2%;
+}
+
+#sub_navigation {
+  background-color: grey;
+  border: 5px solid green;
+}
+
+.navbar_container {
+  display: block;
+}
