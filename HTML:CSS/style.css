@@ -44,7 +44,7 @@
 
 #bottom_header ul {
   padding-bottom: 10px;
-  border: 1px solid green;
+ /* border: 1px solid green;*/
   width: 48%;
   float: right;
 }
@@ -73,11 +73,27 @@
 }
 
 #realtor_image {
-  width: 250px;
+ /* width: 250px;*/
+ max-height: 250px;
 }
 
 .t {
-  border: 1px solid green;
+ /* border: 1px solid green;*/
   width: 25%;
   float: left;
+}
+
+footer {
+  background-color: teal;
+  color: #fff;
+}
+
+footer div {
+    width: 40%;
+  display: inline-block;
+  height: 100px;
+}
+
+#footer_links a {
+  color: #fff;
 }
