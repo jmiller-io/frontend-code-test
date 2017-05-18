@@ -1,42 +1,83 @@
-body {
-  background-color: purple;
+#logo_wrapper {
+  /*border: 1px solid orange;*/
+  width: 40%;
+  display: inline-block;
+  height: 100px;
 }
 
-#logo {
- border: 1px solid red;
- /*display: inline-block;*/
- float: left;
- width: 50%;
+#logo_wrapper img {
+  width: 80%;
 }
 
-.horizontal_list {
-  display: block;
+#top_header_right_container ul {
   text-align: right;
+  display: block;
 }
 
-#right_header {
-  border: 1px solid blue;
+#top_header_right_container ul li {
+  display: inline-block;
+  padding: 0 1.25% 0 1.25%;
+}
+
+#top_header {
+  margin-top: 1%;
+  /*border: 2px solid green;*/
+  height: 80px;
+}
+
+#top_header_right_container {
+  display: inline-block;
+  /*border: 1px solid red;*/
   width: 50%;
   float: right;
 }
 
-#icons {
-  padding-right: 2%;
-}
-
-.horizontal_list li {
-  display: inline-block;
-}
-
-.main_navigation li {
-  padding: 2%;
-}
-
-#sub_navigation {
+#bottom_header {
   background-color: grey;
-  border: 5px solid green;
+  width: 100%;
+  height: 50px;
 }
 
-.navbar_container {
-  display: block;
+#bottom_header form {
+  width: 48%;
+}
+
+#bottom_header ul {
+  padding-bottom: 10px;
+  border: 1px solid green;
+  width: 48%;
+  float: right;
+}
+
+#bottom_header ul li {
+  float: right;
+  display: inline-block;
+  padding: 0 1.25%;
+  margin-bottom: 0.5%;
+}
+
+#bottom_header ul li a {
+  color: white;
+  text-decoration: underline;
+}
+
+#social_links li {
+  display: inline-block;
+  padding: 15px;
+}
+
+#main_wrapper {
+  width: 90%;
+  background-color: lightgrey;
+  margin: 0 auto;
+}
+
+#realtor_image {
+  width: 250px;
+}
+
+.t {
+  border: 1px solid green;
+  width: 25%;
+  float: left;
 }
