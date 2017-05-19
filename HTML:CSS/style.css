@@ -51,14 +51,20 @@
 
 input {
   height: 34px;
+  width: 245px;
 }
 
 #search_btn {
   height: 34px;
-  width: 75px;
+  width: 150px;
   background-color: darkcyan;
   color: #fff;
   font-size: 1.2em;
+  margin-left: 1.8%;
+}
+
+#bottom div {
+  margin-left: 60px;
 }
 
 #bottom_nav {
@@ -88,7 +94,7 @@ input {
 }
 
 #realtor_image {
- max-height: 300px;
+ max-width: 245px;
 }
 
 #contact_btn {
