@@ -57,6 +57,9 @@ input {
 #search_btn {
   height: 34px;
   width: 75px;
+  background-color: darkcyan;
+  color: #fff;
+  font-size: 1.2em;
 }
 
 #bottom_nav {
@@ -91,6 +94,9 @@ input {
 
 #contact_btn {
   width: 100%;
+  background-color: darkcyan;
+  color: #fff;
+  font-size: 1.2em;
 }
 
 #social_links li {
@@ -132,6 +138,7 @@ input {
 
 footer {
   background-color: teal;
+  color: white;
 }
 
 #footer_left_div {
@@ -152,6 +159,12 @@ footer {
 
 #legal_list li {
   display: inline-block;
+  color: #fff;
+}
+
+footer a {
+  text-decoration: underline;
+  color: white;
 }
 
 #housing_img {
