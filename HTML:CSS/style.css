@@ -88,15 +88,24 @@
   margin: 0 8% 0 8%;
 }
 
-#bio {
-  position: relative;
-  bottom: 0;
-  border: 2px solid red;
-}
-
 #realtor_image {
  /* width: 250px;*/
  max-height: 250px;
+}
+
+#bio {
+  bottom: -100px;
+  border: 2px solid red;
+}
+
+
+.bio_nav li {
+  display: inline-block;
+  margin: 0 2%;
+}
+
+.bio_nav {
+  text-align: center;
 }
 
 footer {
