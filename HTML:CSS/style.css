@@ -67,20 +67,30 @@
 }
 
 #main_wrapper {
-  width: 90%;
+  width: 100%;
   background-color: lightgrey;
   margin: 0 auto;
+  position: absolute;
+}
+
+#realtor_wrapper {
+  margin-left: 8%;
+  display: inline-block;
+  border: 1px solid blue;
+  float: left;
+}
+
+.test {
+  border: 1px solid yellow;
+  width: 25%;
+  float: left;
+  height: 100%;
+  margin: 0 8% 0 8%;
 }
 
 #realtor_image {
  /* width: 250px;*/
  max-height: 250px;
-}
-
-.t {
- /* border: 1px solid green;*/
-  width: 25%;
-  float: left;
 }
 
 footer {
